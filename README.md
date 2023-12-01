@@ -43,14 +43,14 @@ To publish a new version of KineXusEngine to npm:
 
 ### Bump The Version Number
 
+1. 
 2. Build the library:  `yarn build`  
-3. Publish:  `npm publish` 
-4. Create a git tag for the new version:  `git tag v1.0.0` 
-5. Push the tag:  `git push --tags` 
+3. 
+4. Publish:  `npm publish` 
+5. Create a git tag for the new version:  `git tag v1.0.0` 
+6. Push the tag:  `git push --tags` 
 
-
-
-To bump up the version of your npm package, you need to update the version number in your `package.json` file. This process is typically governed by semantic versioning, which is a standard for version numbering that reflects the nature of changes in the package. Semantic versioning uses a three-part format: `MAJOR.MINOR.PATCH`, where:
+Semantic versioning uses a three-part format: `MAJOR.MINOR.PATCH`, where:
 
 - `MAJOR` version is incremented for incompatible API changes,
 - `MINOR` version is incremented for adding functionality in a backward-compatible manner, and
