@@ -3,7 +3,8 @@ import resolve from '@rollup/plugin-node-resolve';
 import external from 'rollup-plugin-peer-deps-external';
 import { terser } from 'rollup-plugin-terser';
 import typescript from "rollup-plugin-typescript2";
-
+import autoprefixer from 'autoprefixer';
+import postcss from 'rollup-plugin-postcss';
 
 
 export default [
@@ -29,6 +30,10 @@ export default [
         includeDependencies: true
       }),
       resolve(),
+      postcss({
+        modules: true, // if you are using CSS modules
+        plugins: [autoprefixer()],
+    }),
       terser(),
       typescript({ useTsconfigDeclarationDir: true }),
     ]

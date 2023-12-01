@@ -1,8 +1,7 @@
-'use client'
-
 import React, { CSSProperties } from 'react'
 import clsx from 'clsx'
-import styles from './KineXus.module.css'
+import styles from '@/KineXus/KineXus.module.css'
+
 import { KineXusProps } from './KineXus.types'
 
 const KineXus = ({
