@@ -1,0 +1,9 @@
+{
+  "name": "KineXusEngine",
+  "version": "1.0.0",
+  "description": "Lightweight 2D Interactive Engine",
+  "main": "index.js",
+  "repository": "https://github.com/EdSpurrier/KineXusEngine.git",
+  "author": "EdSpurrier <ed@edspurrier.com>",
+  "license": "MIT License"
+}

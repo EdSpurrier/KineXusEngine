@@ -1,2 +1,2 @@
 # KineXusEngine
-Lightweight 2D Interactive Engine [TypeScript]
+Lightweight 2D Interactive Engine
