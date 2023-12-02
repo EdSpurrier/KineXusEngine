@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
     "declaration": true,
     "outDir": "./dist", // or your preferred output directory
     "module": "esnext",
