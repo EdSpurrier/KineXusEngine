@@ -2,14 +2,13 @@ import babel from 'rollup-plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import external from 'rollup-plugin-peer-deps-external';
 import { terser } from 'rollup-plugin-terser';
-import typescript from "rollup-plugin-typescript2";
+import typescript from 'rollup-plugin-typescript2';
 import autoprefixer from 'autoprefixer';
 import postcss from 'rollup-plugin-postcss';
 
-
 export default [
   {
-    input: './src/index.ts',
+    input: './src/index.ts', // Ensure your entry file is a TypeScript file
     output: [
       {
         file: 'dist/index.js',
@@ -29,13 +28,17 @@ export default [
       external({
         includeDependencies: true
       }),
-      resolve(),
+      resolve({
+        extensions: ['.js', '.jsx', '.ts', '.tsx'] // Resolve all these extensions
+      }),
       postcss({
-        modules: true, // if you are using CSS modules
+        modules: true,
         plugins: [autoprefixer()],
-    }),
+      }),
       terser(),
-      typescript({ useTsconfigDeclarationDir: true }),
+      typescript({
+        useTsconfigDeclarationDir: true,
+      }),
     ]
   }
 ];
